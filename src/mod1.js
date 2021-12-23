@@ -21,7 +21,7 @@ const selectSubtotal = createSelector(selectShopItems, (items) =>
 const selectCount = createSelector(selectShopItems, (items) => items.length);
 
 const selectTax = createSelector(
-    selectSubtotal,
+    selectSubtotal, 
     selectTaxPercent,
     (subtotal, taxPercent) => subtotal * (taxPercent / 100)
 );
